@@ -1,0 +1,78 @@
+
+.card{
+    border: none;
+    width:500px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    /*border: 1px solid black;*/
+    background-color: rgb(255, 255, 255);
+    /*background: hsla(205,46%,30%,1);
+    background:linear-gradient(90deg, hsla(205,46%,30%,1)0%, hsla(260,29%,36%,1)100%);*/
+}
+.card label, h1, h4{
+    color: rgb(0, 0, 0);
+}
+label{
+    color: rgb(0, 0, 0);
+}
+a{
+    color:rgb(0, 0, 0);
+    font-size: 1rem;
+}
+.eyeicon {
+    position: absolute;
+    right: 50px;
+    top: 247px;
+    cursor: pointer;
+    color: #111;
+}
+
+button{
+    align-items: center;
+    text-align: center;
+}
+.btn{
+    width:420px;
+    height:38px;
+    border-radius: 10px;
+    border-color: gray;
+    border: 0px;
+    color: rgb(249, 244, 244);
+}
+a{
+    color:rgb(196, 196, 196);
+    text-align:center;
+    cursor: pointer;
+}
+hr{
+    color: rgb(2, 2, 2);
+}
+.new1{
+    width:90%;
+    height: auto;
+    background-color: red;
+    color: rgb(254, 251, 251);
+    padding-left: 5px;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 25px;
+    margin-left: 70px;
+}
+.newHead{
+    color: white;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-decoration-line: underline;
+    letter-spacing: 0.5px;
+
+}
+.bck{
+    background-color: rgb(59, 150, 230);
+    background-size: cover;
+}
+
+

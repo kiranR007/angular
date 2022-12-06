@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h1>SignUP</h1>
+                    <h4>Register Yourself</h4>
+                </div>
+                <form [formGroup]="signupForm" (ngSubmit)="signUp()">
+                    
+                        <div class="mb-3">
+                          <label for="exampleInputEmail1" class="form-label">Name</label>
+                          <input formControlName="name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Name">
+                          <span class="text-danger" *ngIf="signupForm.controls['name'].dirty && signupForm.hasError('required','name')">*Name is required</span>
+                        </div>
+                        <div class="mb-3">
+                          <label for="exampleInputPassword1" class="form-label">Email</label>
+                          <input formControlName="email" type="email" class="form-control" id="exampleInputPassword1" placeholder="Email">
+                          <span class="text-danger" *ngIf="signupForm.controls['email'].dirty && signupForm.hasError('required','email')">*Email is required</span>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input formControlName="password" [type]="changetype?'password':'text'" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            <span class="eyeicon" (click)="viewpass()"><i [ngClass]="visible?'fa-regular fa-eye':'fa-regular fa-eye-slash'"></i></span>
+                            <span class="text-danger" *ngIf="signupForm.controls['password'].dirty && signupForm.hasError('required','name')">*Password is required</span>
+                          </div>
+                          <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+                            <input formControlName="confirmpassword"  [type]="changetype1?'password':'text'" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                            <span class="eyeicon1" (click)="viewpass1()"><i [ngClass]="visible1?'fa-regular fa-eye':'fa-regular fa-eye-slash'"></i></span>
+                            <span class="text-danger" *ngIf="signupForm.controls['confirmpassword'].dirty && signupForm.hasError('required','confirmpassword')">*Password is required</span>
+                          </div>
+                            
+                        <button type="submit" [disabled]="!signupForm.valid" class="btn btn-success mt-3">SignUp</button>
+                      
+                </form>
+                <a style="color:white; margin-top:10px" routerLink="/login">Already registered Click here to login</a>
+            </div>
+        </div>
+    </div>
+</div>

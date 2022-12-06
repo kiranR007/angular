@@ -1,0 +1,35 @@
+.card{
+    border: none;
+    width:500px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgb(255, 255, 255);
+    /*background: hsla(205,46%,30%,1);
+    background:linear-gradient(90deg, hsla(205,46%,30%,1)0%, hsla(260,29%,36%,1)100%);*/
+}
+.card label, h1, h4{
+    color: rgb(0, 0, 0);
+}
+label{
+    color: rgb(0, 0, 0);
+}
+.eyeicon {
+    position: absolute;
+    right: 50px;
+    top: 330px;
+    cursor: pointer;
+    color: #111;
+}
+.eyeicon1 {
+    position: absolute;
+    right: 50px;
+    top: 410px;
+    cursor: pointer;
+    color: #111;
+}
+.btn{
+    padding: 8px 183px;
+}

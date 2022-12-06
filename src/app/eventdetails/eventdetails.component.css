@@ -1,0 +1,35 @@
+.card-body{
+    line-height: 4px;
+}
+
+.card-title{
+    margin-bottom: 10px;
+}
+.card{
+    background: rgb(215, 232, 245);
+    background:linear-gradient(90deg, rgb(169, 181, 189)0%, rgb(213, 205, 230)100%);
+}
+.main{
+    margin: 0 20px;
+    padding: 7px 20px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    color: #fff;
+}
+.form-control{
+    width: 300px;
+}
+.search-icon{
+    position: absolute;
+    top:25px;
+    left: 42%;
+    color:black
+}
+.row{
+    display: flex;
+    row-gap: 2px;
+    margin-top: 10px;
+}
+.card-title {
+    font-size: 1.2rem;
+}

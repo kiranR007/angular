@@ -1,0 +1,33 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="text-center">
+                    <h1>Login</h1>
+                    <h4>Please enter username & password</h4>
+                </div>
+                <form [formGroup]="loginForm" (ngSubmit)="login()">
+                    
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email address</label>
+                        <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                        <span class="text-danger" *ngIf="loginForm.controls['email'].dirty && loginForm.hasError('required','email')">*Email ID is required</span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input formControlName="password" [type]="changetype?'password':'text'" class="form-control" id="exampleInputPassword1" placeholder="Enter password">
+                        <span class="eyeicon" (click)="viewpass()"><i [ngClass]="visible?'fa-regular fa-eye':'fa-regular fa-eye-slash'"></i></span>
+                        <span class="text-danger" *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')">*Password is required</span>
+                    </div>
+                        
+                    <button type="submit" routerLink="/userdashboard" [disabled]="!loginForm.valid" class="btn btn-primary mb-2">Login</button>
+                    <a class="mb-3 d-flex flex-column justify-content-center cursor-pointer" routerLink="/forgetpassword">Forgot Password</a>
+                </form>
+                <u></u>
+                <button type="submit" routerLink="/signup" class="btn btn-success d-flex flex-column justify-content-center mt-5">Create Account</button>
+                
+            </div>
+        </div>
+    </div>
+</div>

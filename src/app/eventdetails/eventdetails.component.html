@@ -1,0 +1,27 @@
+<header>
+    <div class="navbar navbar-dark bg-primary shadow-sm">
+        <div class="navbar-brand align-item-center d-flex">
+            <strong class="main" style="font-size:20px;">UpComing Events</strong>
+            <div class="form-group">
+                <input type="text" class="form-control mt-1" placeholder="Seach Event">
+            </div>
+            <span class="fas fa-search search-icon"></span>
+        </div>
+    </div>
+</header>
+
+<div class="row mx-3 d-flex">
+    <div class="col-sm-3">
+      <div *ngIf="showMe" class="card">
+        <div  class="card-body mt-1" *ngFor="let row of eventData">
+          <h5 class="card-title">{{row.eventtitle}}</h5>
+          <hr>
+          <p class="card-text">Date & Time &nbsp;</p>
+          <p>{{row.eventtime}}</p><p>{{row.eventdate}}</p>
+          <p>{{row.eventvenue}}</p>
+          <a routerLink="/eventparticipation" class="btn btn-primary mx-3">Register</a>
+          <a (click)="toggleTag(row)"  class="btn btn-light">Cancel</a>
+        </div>
+      </div>
+    </div>
+</div>
